@@ -21,7 +21,7 @@
 13-->C:\Users\cxy\Desktop\Android_esriat_exp1144_iat1143_9ab1aa74\sample\mscV5PlusDemo\src\main\AndroidManifest.xml:9:22-72
 14
 15    <application
-15-->C:\Users\cxy\Desktop\Android_esriat_exp1144_iat1143_9ab1aa74\sample\mscV5PlusDemo\src\main\AndroidManifest.xml:11:5-54:19
+15-->C:\Users\cxy\Desktop\Android_esriat_exp1144_iat1143_9ab1aa74\sample\mscV5PlusDemo\src\main\AndroidManifest.xml:11:5-34:19
 16        android:name="com.iflytek.mscv5plusdemo.SpeechApp"
 16-->C:\Users\cxy\Desktop\Android_esriat_exp1144_iat1143_9ab1aa74\sample\mscV5PlusDemo\src\main\AndroidManifest.xml:13:9-33
 17        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
@@ -71,46 +71,6 @@
 39-->C:\Users\cxy\Desktop\Android_esriat_exp1144_iat1143_9ab1aa74\sample\mscV5PlusDemo\src\main\AndroidManifest.xml:32:13-133
 40            android:screenOrientation="portrait" />
 40-->C:\Users\cxy\Desktop\Android_esriat_exp1144_iat1143_9ab1aa74\sample\mscV5PlusDemo\src\main\AndroidManifest.xml:33:13-49
-41        <activity
-41-->C:\Users\cxy\Desktop\Android_esriat_exp1144_iat1143_9ab1aa74\sample\mscV5PlusDemo\src\main\AndroidManifest.xml:34:9-37:51
-42            android:name="com.iflytek.mscv5plusdemo.AsrDemo"
-42-->C:\Users\cxy\Desktop\Android_esriat_exp1144_iat1143_9ab1aa74\sample\mscV5PlusDemo\src\main\AndroidManifest.xml:35:13-61
-43            android:configChanges="mcc|mnc|locale|touchscreen|keyboard|keyboardHidden|navigation|orientation|screenLayout|fontScale"
-43-->C:\Users\cxy\Desktop\Android_esriat_exp1144_iat1143_9ab1aa74\sample\mscV5PlusDemo\src\main\AndroidManifest.xml:36:13-133
-44            android:screenOrientation="portrait" />
-44-->C:\Users\cxy\Desktop\Android_esriat_exp1144_iat1143_9ab1aa74\sample\mscV5PlusDemo\src\main\AndroidManifest.xml:37:13-49
-45        <activity
-45-->C:\Users\cxy\Desktop\Android_esriat_exp1144_iat1143_9ab1aa74\sample\mscV5PlusDemo\src\main\AndroidManifest.xml:38:9-41:51
-46            android:name="com.iflytek.mscv5plusdemo.TtsDemo"
-46-->C:\Users\cxy\Desktop\Android_esriat_exp1144_iat1143_9ab1aa74\sample\mscV5PlusDemo\src\main\AndroidManifest.xml:39:13-61
-47            android:configChanges="mcc|mnc|locale|touchscreen|keyboard|keyboardHidden|navigation|orientation|screenLayout|fontScale"
-47-->C:\Users\cxy\Desktop\Android_esriat_exp1144_iat1143_9ab1aa74\sample\mscV5PlusDemo\src\main\AndroidManifest.xml:40:13-133
-48            android:screenOrientation="portrait" />
-48-->C:\Users\cxy\Desktop\Android_esriat_exp1144_iat1143_9ab1aa74\sample\mscV5PlusDemo\src\main\AndroidManifest.xml:41:13-49
-49        <activity
-49-->C:\Users\cxy\Desktop\Android_esriat_exp1144_iat1143_9ab1aa74\sample\mscV5PlusDemo\src\main\AndroidManifest.xml:42:9-45:51
-50            android:name="com.iflytek.mscv5plusdemo.IvwActivity"
-50-->C:\Users\cxy\Desktop\Android_esriat_exp1144_iat1143_9ab1aa74\sample\mscV5PlusDemo\src\main\AndroidManifest.xml:43:13-65
-51            android:configChanges="mcc|mnc|locale|touchscreen|keyboard|keyboardHidden|navigation|orientation|screenLayout|fontScale"
-51-->C:\Users\cxy\Desktop\Android_esriat_exp1144_iat1143_9ab1aa74\sample\mscV5PlusDemo\src\main\AndroidManifest.xml:44:13-133
-52            android:screenOrientation="portrait" />
-52-->C:\Users\cxy\Desktop\Android_esriat_exp1144_iat1143_9ab1aa74\sample\mscV5PlusDemo\src\main\AndroidManifest.xml:45:13-49
-53        <activity
-53-->C:\Users\cxy\Desktop\Android_esriat_exp1144_iat1143_9ab1aa74\sample\mscV5PlusDemo\src\main\AndroidManifest.xml:46:9-49:51
-54            android:name="com.iflytek.mscv5plusdemo.WakeDemo"
-54-->C:\Users\cxy\Desktop\Android_esriat_exp1144_iat1143_9ab1aa74\sample\mscV5PlusDemo\src\main\AndroidManifest.xml:47:13-62
-55            android:configChanges="mcc|mnc|locale|touchscreen|keyboard|keyboardHidden|navigation|orientation|screenLayout|fontScale"
-55-->C:\Users\cxy\Desktop\Android_esriat_exp1144_iat1143_9ab1aa74\sample\mscV5PlusDemo\src\main\AndroidManifest.xml:48:13-133
-56            android:screenOrientation="portrait" />
-56-->C:\Users\cxy\Desktop\Android_esriat_exp1144_iat1143_9ab1aa74\sample\mscV5PlusDemo\src\main\AndroidManifest.xml:49:13-49
-57        <activity
-57-->C:\Users\cxy\Desktop\Android_esriat_exp1144_iat1143_9ab1aa74\sample\mscV5PlusDemo\src\main\AndroidManifest.xml:50:9-53:51
-58            android:name="com.iflytek.mscv5plusdemo.OneShotDemo"
-58-->C:\Users\cxy\Desktop\Android_esriat_exp1144_iat1143_9ab1aa74\sample\mscV5PlusDemo\src\main\AndroidManifest.xml:51:13-65
-59            android:configChanges="mcc|mnc|locale|touchscreen|keyboard|keyboardHidden|navigation|orientation|screenLayout|fontScale"
-59-->C:\Users\cxy\Desktop\Android_esriat_exp1144_iat1143_9ab1aa74\sample\mscV5PlusDemo\src\main\AndroidManifest.xml:52:13-133
-60            android:screenOrientation="portrait" />
-60-->C:\Users\cxy\Desktop\Android_esriat_exp1144_iat1143_9ab1aa74\sample\mscV5PlusDemo\src\main\AndroidManifest.xml:53:13-49
-61    </application>
-62
-63</manifest>
+41    </application>
+42
+43</manifest>

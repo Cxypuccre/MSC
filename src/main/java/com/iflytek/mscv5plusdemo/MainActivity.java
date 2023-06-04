@@ -59,26 +59,6 @@ public class MainActivity extends AppCompatActivity {
         findViewById(R.id.iatBtn).setOnClickListener(v -> {
             isPrivacyConfirm(new Intent(MainActivity.this, IatDemo.class));
         });
-        // 语法识别
-        findViewById(R.id.asrBtn).setOnClickListener(v -> {
-            isPrivacyConfirm(new Intent(MainActivity.this, AsrDemo.class));
-        });
-        // 语义理解
-        findViewById(R.id.nlpBtn).setOnClickListener(v -> {
-            showTip("请登录：http://www.xfyun.cn/ 下载aiui体验吧！");
-        });
-        // 语音合成
-        findViewById(R.id.ttsBtn).setOnClickListener(v -> {
-            isPrivacyConfirm(new Intent(MainActivity.this, TtsDemo.class));
-        });
-        // 增强版语音合成 xtts
-        findViewById(R.id.xttsBtn).setOnClickListener(v -> {
-            isPrivacyConfirm(new Intent(MainActivity.this, TtsDemo.class));
-        });
-        // 唤醒
-        findViewById(R.id.ivwBtn).setOnClickListener(v -> {
-            isPrivacyConfirm(new Intent(MainActivity.this, IvwActivity.class));
-        });
     }
 
     private Toast mToast;

@@ -37,61 +37,6 @@
                 android:text="立刻体验语音听写"
                 android:textColor="@color/black"
                 android:textSize="@dimen/btn_size" />
-
-            <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/asrBtn"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="10dp"
-                android:layout_marginTop="5dp"
-                android:layout_marginRight="10dp"
-                android:text="立刻体验语法识别"
-                android:textColor="@color/black"
-                android:textSize="@dimen/btn_size" />
-
-            <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/nlpBtn"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="10dp"
-                android:layout_marginTop="5dp"
-                android:layout_marginRight="10dp"
-                android:text="立刻体验语义理解"
-                android:textColor="@color/black"
-                android:textSize="@dimen/btn_size" />
-
-            <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/ttsBtn"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="10dp"
-                android:layout_marginTop="5dp"
-                android:layout_marginRight="10dp"
-                android:text="立刻体验语音合成"
-                android:textColor="@color/black"
-                android:textSize="@dimen/btn_size" />
-            <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/xttsBtn"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="10dp"
-                android:layout_marginTop="5dp"
-                android:layout_marginRight="10dp"
-                android:text="立刻体验增强版语音合成"
-                android:textColor="@color/black"
-                android:textSize="@dimen/btn_size" />
-
-            <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/ivwBtn"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="10dp"
-                android:layout_marginTop="5dp"
-                android:layout_marginRight="10dp"
-                android:text="立刻体验语音唤醒"
-                android:textColor="@color/black"
-                android:textSize="@dimen/btn_size" />
-
         </LinearLayout>
 
 
