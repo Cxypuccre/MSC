@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.os.Environment;
 import android.util.Log;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -28,8 +29,14 @@ import com.iflytek.speech.setting.IatSettings;
 import com.iflytek.speech.util.FucUtil;
 import com.iflytek.speech.util.JsonParser;
 
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.net.Socket;
 import java.util.HashMap;
 import java.util.LinkedHashMap;
 
@@ -46,6 +53,7 @@ public class IatDemo extends Activity implements OnClickListener {
     private SharedPreferences mSharedPreferences;
     private Toast mToast;
     private String mEngineType = "cloud";
+    public static Socket socket;
 
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -146,8 +154,11 @@ public class IatDemo extends Activity implements OnClickListener {
                     showTip("识别失败,错误码：" + ret + ",请点击网址https://www.xfyun.cn/document/error-code查询解决方案");
                     return;
                 }
+                Log.d(TAG, "onClick: ");
+                fileConserve();
                 try {
-                    InputStream open = getAssets().open("iattest.wav");
+//                    InputStream open = getAssets().open("iattest.wav");
+                    InputStream open = new FileInputStream(getExternalFilesDir(Environment.DIRECTORY_PICTURES)+"\\iattest.wav");
                     byte[] buff = new byte[1280];
                     while (open.available() > 0) {
                         int read = open.read(buff);
@@ -187,7 +198,85 @@ public class IatDemo extends Activity implements OnClickListener {
                 break;
         }
     }
+    public void fileConserve() {
+            Log.d(TAG, "fileConserve: 1?");
+            new Thread(new Runnable() {
+                @Override
+                public void run() {
+                    // 创建Socket连接
+                    try {
+                        socket = new Socket("192.168.1.1", 4444);
+                        // 创建输出流，用于写入WAV文件
+                        try {
+                            Log.d(TAG, "run: ?");
 
+                            FileOutputStream fileOutputStream = new FileOutputStream(getExternalFilesDir(Environment.DIRECTORY_PICTURES)+"\\iattest.wav");
+                            // 创建输入流，用于读取Socket数据
+                            Log.d(TAG, "run: 1?");
+                            InputStream inputStream = socket.getInputStream();
+                            Log.d(TAG, "run: 2?");
+                            // 读取Socket数据并写入WAV文件
+                            byte[] buffer = new byte[1024];
+                            int len;
+                            Log.d(TAG, "run: 3?");
+                            while ((len = inputStream.read(buffer)) != -1) {
+                                fileOutputStream.write(buffer, 0, len);
+                                fileOutputStream.flush();
+                            }
+                            Log.d(TAG, "run:4?");
+                            // 关闭流和Socket连接
+                            fileOutputStream.close();
+                            inputStream.close();
+                            socket.close();
+                        } catch (FileNotFoundException e) {
+                            e.printStackTrace();
+                        } catch (IOException e) {
+                            e.printStackTrace();
+                        }
+                        
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    }
+                }
+            }).start();
+
+//            // 创建输出流，用于写入WAV文件
+//        try {
+//            FileOutputStream fileOutputStream = new FileOutputStream("C:\\Users\\cxy\\Desktop\\Android_esriat_exp1144_iat1143_9ab1aa74\\sample\\mscV5PlusDemo\\src\\main\\assets\\iattest.wav");
+//            // 创建输入流，用于读取Socket数据
+//            InputStream inputStream = socket.getInputStream();
+//            // 读取Socket数据并写入WAV文件
+//            byte[] buffer = new byte[1024];
+//            int len;
+//            Log.d(TAG, "fileConserve: write?");
+//            while ((len = inputStream.read(buffer)) != -1) {
+//                fileOutputStream.write(buffer, 0, len);
+//                fileOutputStream.flush();
+//            }
+//
+//            // 关闭流和Socket连接
+//            fileOutputStream.close();
+//            inputStream.close();
+//            socket.close();
+//        } catch (FileNotFoundException e) {
+//            e.printStackTrace();
+//        } catch (IOException e) {
+//            e.printStackTrace();
+//        }
+
+        // 读取Socket数据并写入WAV文件
+//        byte[] buffer = new byte[1024];
+//        int len;
+//        while ((len = inputStream.read(buffer)) != -1) {
+//            fileOutputStream.write(buffer, 0, len);
+//            fileOutputStream.flush();
+//        }
+//
+//        // 关闭流和Socket连接
+//        fileOutputStream.close();
+//        inputStream.close();
+//        socket.close();
+    }
     /**
      * 初始化监听器。
      */
